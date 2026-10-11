@@ -1,0 +1,247 @@
+{
+  "Events": [
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "1"
+          },
+          "title": {
+            "S": "Cloud meetup"
+          },
+          "date": {
+            "S": "2026-10-18 18:00"
+          },
+          "venue": {
+            "S": "Pune"
+          },
+          "price": {
+            "N": "299"
+          },
+          "seatsLeft": {
+            "N": "42"
+          },
+          "category": {
+            "S": "Tech"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "2"
+          },
+          "title": {
+            "S": "Indie music night"
+          },
+          "date": {
+            "S": "2026-10-24 20:00"
+          },
+          "venue": {
+            "S": "Pune"
+          },
+          "price": {
+            "N": "499"
+          },
+          "seatsLeft": {
+            "N": "8"
+          },
+          "category": {
+            "S": "Music"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "3"
+          },
+          "title": {
+            "S": "Photography workshop"
+          },
+          "date": {
+            "S": "2026-10-30 10:00"
+          },
+          "venue": {
+            "S": "Pune"
+          },
+          "price": {
+            "N": "799"
+          },
+          "seatsLeft": {
+            "N": "25"
+          },
+          "category": {
+            "S": "Workshop"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "4"
+          },
+          "title": {
+            "S": "Street food festival"
+          },
+          "date": {
+            "S": "2026-11-02 12:00"
+          },
+          "venue": {
+            "S": "Baner, Pune"
+          },
+          "price": {
+            "N": "150"
+          },
+          "seatsLeft": {
+            "N": "120"
+          },
+          "category": {
+            "S": "Food"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "5"
+          },
+          "title": {
+            "S": "Sunday cycling ride"
+          },
+          "date": {
+            "S": "2026-11-08 06:30"
+          },
+          "venue": {
+            "S": "Pune"
+          },
+          "price": {
+            "N": "0"
+          },
+          "seatsLeft": {
+            "N": "40"
+          },
+          "category": {
+            "S": "Sports"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "6"
+          },
+          "title": {
+            "S": "AWS serverless workshop"
+          },
+          "date": {
+            "S": "2026-11-10 10:00"
+          },
+          "venue": {
+            "S": "Hinjewadi, Pune"
+          },
+          "price": {
+            "N": "399"
+          },
+          "seatsLeft": {
+            "N": "30"
+          },
+          "category": {
+            "S": "Tech"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "7"
+          },
+          "title": {
+            "S": "Acoustic evening"
+          },
+          "date": {
+            "S": "2026-11-14 19:30"
+          },
+          "venue": {
+            "S": "Koregaon Park, Pune"
+          },
+          "price": {
+            "N": "599"
+          },
+          "seatsLeft": {
+            "N": "60"
+          },
+          "category": {
+            "S": "Music"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "8"
+          },
+          "title": {
+            "S": "Pottery for beginners"
+          },
+          "date": {
+            "S": "2026-11-16 11:00"
+          },
+          "venue": {
+            "S": "Aundh, Pune"
+          },
+          "price": {
+            "N": "899"
+          },
+          "seatsLeft": {
+            "N": "12"
+          },
+          "category": {
+            "S": "Workshop"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "eventId": {
+            "S": "9"
+          },
+          "title": {
+            "S": "Football 5-a-side"
+          },
+          "date": {
+            "S": "2026-11-21 17:00"
+          },
+          "venue": {
+            "S": "Viman Nagar, Pune"
+          },
+          "price": {
+            "N": "250"
+          },
+          "seatsLeft": {
+            "N": "20"
+          },
+          "category": {
+            "S": "Sports"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "Comment": "Booking workflow: send confirmation email, then alert admin",
+  "StartAt": "SendConfirmationEmail",
+  "States": {
+    "SendConfirmationEmail": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-2:ACCOUNT_ID:function:sendBookingEmail",
+        "Payload.$": "$"
+      },
+      "ResultPath": "$.emailResult",
+      "Retry": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.error",
+          "Next": "AlertAdminFailure"
+        }
+      ],
+      "Next": "NotifyAdmin"
+    },
+    "NotifyAdmin": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-2:ACCOUNT_ID:booking-alerts",
+        "Subject": "New EventBook booking",
+        "Message.$": "States.Format('New booking. Confirmation email sent to {}.', $.to)"
+      },
+      "End": true
+    },
+    "AlertAdminFailure": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-2:ACCOUNT_ID:booking-alerts",
+        "Subject": "EventBook: confirmation email failed",
+        "Message.$": "States.Format('Could not send the confirmation email to {}.', $.to)"
+      },
+      "Next": "EmailFailed"
+    },
+    "EmailFailed": {
+      "Type": "Fail",
+      "Error": "EmailFailed",
+      "Cause": "Confirmation email could not be sent after retries"
+    }
+  }
+}

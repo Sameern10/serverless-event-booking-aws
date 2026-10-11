@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventBook - Find an event and book your seat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#top">Event<span>Book</span></a>
+    <span class="grow"></span>
+    <span id="who" class="who"></span>
+    <button id="btn-login" class="btn small gold">Log in</button>
+    <button id="btn-logout" class="btn small ghost hidden">Log out</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Find an event.<br>Book your seat.</h1>
+    <p>Meetups, music nights and workshops, all in one place. Pick an event, log in, and your confirmation lands in your inbox.</p>
+    <a class="btn gold" href="#events">Browse events</a>
+  </div>
+</section>
+
+<main class="wrap" id="events">
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search events" aria-label="Search events">
+    <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+  </div>
+  <div id="grid" class="grid" aria-live="polite"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Built on AWS with Lambda, API Gateway, DynamoDB, Cognito, SES and EventBridge.</div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <button id="dlg-close" class="x" aria-label="Close">&times;</button>
+  <h2 id="dlg-title">Welcome</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-login" aria-selected="true">Log in</button>
+    <button class="tab" role="tab" id="t-signup" aria-selected="false">Create account</button>
+  </div>
+  <form id="f-login">
+    <label for="l-email">Email</label><input id="l-email" type="email" autocomplete="username" required>
+    <label for="l-pass">Password</label><input id="l-pass" type="password" autocomplete="current-password" required>
+    <button class="btn full" type="submit">Log in</button>
+  </form>
+  <form id="f-signup" class="hidden">
+    <label for="s-email">Email</label><input id="s-email" type="email" autocomplete="username" required>
+    <label for="s-pass">Password</label><input id="s-pass" type="password" autocomplete="new-password" required>
+    <p class="hint">At least 8 characters with a capital letter, a number and a symbol.</p>
+    <button class="btn full" type="submit">Create account</button>
+  </form>
+  <form id="f-code" class="hidden">
+    <label for="c-code">Verification code</label><input id="c-code" inputmode="numeric" autocomplete="one-time-code" required>
+    <p class="hint">We emailed a code to your address. Check spam if you can't find it.</p>
+    <button class="btn full" type="submit">Verify and continue</button>
+  </form>
+  <p id="dmsg" class="dmsg" role="status" aria-live="polite"></p>
+</dialog>
+
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

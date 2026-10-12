@@ -8,7 +8,7 @@ Built by **Sameer Naik** ([@Sameern10](https://github.com/Sameern10)) as an AWS 
 
 ## Architecture
 
-!\[Architecture diagram](docs/architecture.svg)
+![Architecture diagram](docs/architecture.svg)
 
 ### How a booking works
 
@@ -40,41 +40,41 @@ Built by **Sameer Naik** ([@Sameern10](https://github.com/Sameern10)) as an AWS 
 
 **Website: events with category filters and search**
 
-!\[Website](docs/screenshots/01-website.png)
+![Website](docs/screenshots/01-website.png)
 
 **Create account and log in (Cognito)**
 
 |Create account|Log in|
 |-|-|
-|!\[Create account](docs/screenshots/02-create-account-page.png)|!\[Log in](docs/screenshots/02-login-page.png)|
+|![Create account](docs/screenshots/02-create-account-page.png)|!\[Log in](docs/screenshots/02-login-page.png)|
 
 **Booking confirmation email**
 
-!\[Confirmation email](docs/screenshots/03-confirmation-email.png)
+![Confirmation email](docs/screenshots/03-confirmation-email.png)
 
 **Step Functions: booking workflow definition and graph**
 
-!\[Step Functions workflow](docs/screenshots/04-stepfunctions-graph.png)
+![Step Functions workflow](docs/screenshots/04-stepfunctions-graph.png)
 
 **Step Functions: a successful execution**
 
-!\[Step Functions execution](docs/screenshots/05-stepfunctions-executions.png)
+![Step Functions execution](docs/screenshots/05-stepfunctions-executions.png)
 
 **SQS: booking-emails queue monitoring**
 
-!\[SQS monitoring](docs/screenshots/06-sqs-monitoring.png)
+![SQS monitoring](docs/screenshots/06-sqs-monitoring.png)
 
 **DynamoDB: Bookings table**
 
-!\[DynamoDB Bookings](docs/screenshots/07-dynamodb-bookings.png)
+![DynamoDB Bookings](docs/screenshots/07-dynamodb-bookings.png)
 
 **EventBridge: nightly reminder schedule**
 
-!\[EventBridge schedule](docs/screenshots/08-eventbridge-schedule.png)
+![EventBridge schedule](docs/screenshots/08-eventbridge-schedule.png)
 
 **Cognito: user pool**
 
-!\[Cognito user pool](docs/screenshots/09-cognito-users.png)
+![Cognito user pool](docs/screenshots/09-cognito-users.png)
 
 ## Project structure
 

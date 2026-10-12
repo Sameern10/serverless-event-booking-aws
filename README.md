@@ -46,7 +46,7 @@ Built by **Sameer Naik** ([@Sameern10](https://github.com/Sameern10)) as an AWS 
 
 |Create account|Log in|
 |-|-|
-|![Create account](docs/screenshots/02-create-account-page.png)|!\[Log in](docs/screenshots/02-login-page.png)|
+|![Create account](docs/screenshots/02-create-account-page.png)|![Log in](docs/screenshots/02-login-page.png)|
 
 **Booking confirmation email**
 
